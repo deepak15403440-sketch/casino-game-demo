@@ -25,7 +25,6 @@ const Dice = ({ balance, updateBalance }) => {
     setMessage('Rolling...');
     setResult(null);
 
-    // Animate rolling
     let rollCount = 0;
     const rollInterval = setInterval(() => {
       const newDice = [Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1];
@@ -35,7 +34,6 @@ const Dice = ({ balance, updateBalance }) => {
       if (rollCount >= 15) {
         clearInterval(rollInterval);
 
-        // Final roll
         const finalDice = [Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1];
         setDice(finalDice);
 
